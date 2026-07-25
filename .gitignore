@@ -1,7 +1,5 @@
-build/
-install/
-log/
-.vscode/
-*.pdf
-*.gv
-*.toml
+**/__pycache__/
+*.pyc
+**/__pycache__/
+*.pyc
+*.zip

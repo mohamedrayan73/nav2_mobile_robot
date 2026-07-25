@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = "nav2_mobile_robot"
+package_name = "nav2_mobile_robot_hw"
 
 setup(
     name=package_name,
@@ -18,6 +18,7 @@ setup(
                 "launch/map_server.launch.py",
                 "launch/amcl.launch.py",
                 "launch/navigation.launch.py",
+                "launch/scripts.launch.py",
                 "urdf/nav2_mobile_robot.xacro",
                 "urdf/gazebo_control.xacro",
                 "urdf/lidar.xacro",
@@ -38,15 +39,17 @@ setup(
     ],
     install_requires=["setuptools", "visualization_msgs",  "geometry_msgs", "nav_msgs"],
     zip_safe=True,
-    maintainer="blackbeard",
-    maintainer_email="abubakarmughal92@gmail.com",
+    maintainer="mohamedrayan73",
+    maintainer_email="mohamedrayan71763@gmail.com",
     description="TODO: Package description",
     license="TODO: License declaration",
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            'localization = nav2_mobile_robot.localization:main',
-            'mine_detection = nav2_mobile_robot.mine_detection:main'
+            'hardware_interface = nav2_mobile_robot_hw.hardware_interface:main',
+            'localization = nav2_mobile_robot_hw.localization:main',
+        'mine_detection = nav2_mobile_robot_hw.mine_detection:main',
+        'mission_manager = nav2_mobile_robot_hw.mission_manager:main',
         ],
     },
 )
